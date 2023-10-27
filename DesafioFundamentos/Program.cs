@@ -17,10 +17,9 @@ precoPorHora = Convert.ToDecimal(Console.ReadLine());
 Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
 
 string opcao = string.Empty;
-bool exibirMenu = true;
 
 // Realiza o loop do menu
-while (exibirMenu)
+while (true)
 {
     Console.Clear();
     Console.WriteLine("Digite a sua opção:");
@@ -44,7 +43,8 @@ while (exibirMenu)
             break;
 
         case "4":
-            exibirMenu = false;
+            Console.WriteLine("O programa se encerrou");
+            Environment.Exit(0);
             break;
 
         default:
@@ -52,8 +52,8 @@ while (exibirMenu)
             break;
     }
 
-    Console.WriteLine("Pressione uma tecla para continuar");
+    Console.WriteLine("Pressione uma tecla para retornar ao menu");
     Console.ReadLine();
 }
 
-Console.WriteLine("O programa se encerrou");
+
